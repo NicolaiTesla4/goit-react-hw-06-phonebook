@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
-import styles from './ContactList.module.css'
 import { deleteUser } from '../../redux/contacts-selectors.js'
+import css from './ContactList.module.css'
 
 
 export default function ContactList({filteredContact }) {
@@ -12,25 +12,24 @@ export default function ContactList({filteredContact }) {
   if (filtered.filter) {
     listContacts = filteredContact.map(element => {
       return (<li key={element.id} >{element.name}: {element.number}
-        <button className={styles.btn}
+        <button className={css.button}
           onClick={(e) => {
             dispatch(deleteUser(element.id))
           }}
         >Delete</button>
       </li>)
     })
-
   }
+
   else { 
     listContacts = users.map(element => { 
           return (<li key={element.id} >{element.name}: {element.number}
-            <button className={styles.btn}
+            <button className={css.button}
               onClick={(e) => { dispatch(deleteUser(element.id))           
               }}
             >Delete</button>
           </li>)
     })
-
   }
 
   return (
