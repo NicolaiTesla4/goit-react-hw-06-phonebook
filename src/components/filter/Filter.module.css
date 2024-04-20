@@ -1,14 +1,16 @@
-.container_filter {
+.filter {
+    width: 200px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
-.container_filter label {
-    font-size: 18px;
+.filter input:hover {
+    border: 1px solid #2196f3;
 }
 
-.container_filter input {
-    width: 200px;
-    margin-bottom: 20px;
+.filter input:focus {
+    border: 1px solid #2196f3;
 }
