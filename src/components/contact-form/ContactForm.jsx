@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   return (
     <form className={css.form}>
-            <label className={css.label }>Name:</label>
+            <label className={css.label}>Name:</label>
             <input
                 className={css.input}
                 type="text"
@@ -37,7 +37,7 @@ export default function ContactForm() {
                 onChange={(e)=> setName(e.target.value)}
                 required
             />
-            <label className={css.label }>Number:</label>
+            <label className={css.label}>Number:</label>
             <input className={css.input}
                 type="tel"
                 name="number"

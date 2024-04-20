@@ -22,14 +22,12 @@ export default function ContactList({filteredContact }) {
     listContacts = users.map(element => { 
           return (<li key={element.id} >{element.name}: {element.number}
             <button className={css.button}
-              onClick={(e) => { dispatch(deleteUser(element.id))           
-              }}
-            >Delete</button>
+              onClick={(e) => {dispatch(deleteUser(element.id))}}>Delete</button>
           </li>)
     })
   }
 
   return (
-    <ul>{listContacts }</ul>
+    <ul>{listContacts}</ul>
   )
 }
