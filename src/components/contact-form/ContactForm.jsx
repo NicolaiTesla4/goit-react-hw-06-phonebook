@@ -8,9 +8,7 @@ export default function ContactForm() {
   const [name, setName] = useState('')
   const [number, setNumber]= useState('')
   const users = useSelector((state)=> state.users.contacts)
-  
   const dispatch = useDispatch()
-
   const handleUpdateContacts = (e) => { 
     e.preventDefault()
     const form = e.target.form
